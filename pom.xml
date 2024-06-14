@@ -21,11 +21,11 @@
 <distributionManagement>
       <snapshotRepository>
         <id>jfrog-snapshots</id>
-        <url>http://your-host:8081/repository/maven-snapshots/</url>
+        <url>https://talktodevianup.jfrog.io/artifactory/mydemo-app/</url>
       </snapshotRepository>
       <repository>
         <id>jfrog-releases</id>
-        <url>http://your-host:8081/repository/maven-releases/</url>
+        <url>https://talktodevianup.jfrog.io/artifactory/mydemo-app/</url>
       </repository>
     </distributionManagement>
 
