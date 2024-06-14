@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Clone the Repository ') {
             steps {
-               git branch: 'static-code-analysis-jenkinsfile', credentialsId: 'Github_credentails', url: 'https://github.com/techworldwithmurali/java-application.git'
+               git branch: 'static-code-analysis-jenkinsfile', credentialsId: 'Github_credentails', url: 'https://github.com/divsb/java-application.git'
                
                
             }
