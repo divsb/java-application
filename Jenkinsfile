@@ -1,13 +1,13 @@
 pipeline {
     agent any
     tools{
-        maven "Maven3.8.7"
+        maven "maven397"
     }
 
     stages {
         stage('Clone the repository') {
             steps {
-               git branch: 'build-and-deploy-to-tomcat-jenkinsfile', credentialsId: 'Github_credentails', url: 'https://github.com/techworldwithmurali/java-application.git'
+               git branch: 'build-and-deploy-to-tomcat-jenkinsfile', credentialsId: 'Github_credentails', url: 'https://github.com/divsb/java-application.git'
             }
         }
         
@@ -20,7 +20,7 @@ pipeline {
         
         stage('Deploy to tomcat') {
             steps {
-            deploy adapters: [tomcat7(credentialsId: 'Tomcat-7-cred', path: '', url: 'http://100.25.166.179:8080')], contextPath: null, war: '**/*.war'
+          deploy adapters: [tomcat9(credentialsId: 'Tomcat-9-cred', path: '', url: 'http://54.234.124.178:8080')], contextPath: null, war: '**/*.war'
                 
             }
         }
